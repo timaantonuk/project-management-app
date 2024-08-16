@@ -1,4 +1,7 @@
 import React from 'react';
+import { MdNoteAlt } from "react-icons/md";
+
+
 
 function Sidebar() {
   return (
@@ -6,7 +9,7 @@ function Sidebar() {
 
         <h1 className='font-bold text-3xl mx-auto lg:mx-0'>YOUR PROJECTS</h1>
 
-        <button className='bg-stone-500 text-white font-outfit font-light rounded-xl py-3'>+ Add Project +</button>
+        <button className='bg-stone-500 text-white font-outfit font-light rounded-xl py-3 flex items-center justify-center gap-2'> Add Project <MdNoteAlt style={{width:'25px', height:'25px'}} className='text-stone-800'/></button>
 
         <ul>
 
