@@ -9,25 +9,37 @@ function App() {
   const [activeProject, setActiveProject] = useState(1);
   const [projects, setProjects] = useState([
     {
-      title: 'Have a good day!',
-      description: 'Peppe Peppe Peppe Peppe Peppe Peppe Peppe Peppe Peppe Peppe Peppe Peppe Peppe Peppe Peppe Peppe Peppe',
+      title: 'Morning Routine',
+      description: 'Start your day off right with a productive morning routine. This project includes tasks that help you wake up early, exercise, and prepare a healthy breakfast.',
       id: 0,
-      date: '31.01.2022',
-      tasks: [{id: 0, description: 'skrillex'}, {id: 1, description: 'sonny'}, {id: 2, description: 'tinkoff'}],
+      date: '01.01.2024',
+      tasks: [
+        {id: 0, description: 'Wake up at 6 AM'},
+        {id: 1, description: '30 minutes of morning exercise'},
+        {id: 2, description: 'Prepare a healthy breakfast'},
+      ],
     },
     {
-      title: 'My little pony',
-      description: 'fuCK12 fuCK12 fuCK12 fuCK12 fuCK12 fuCK12 fuCK12 fuCK12 fuCK12 fuCK12 fuCK12 fuCK12 fuCK12 fuCK12 fuCK12 fuCK12 fuCK12',
+      title: 'Learn React',
+      description: 'A step-by-step guide to mastering React.js. Follow this project to build your knowledge of modern web development and create dynamic user interfaces.',
       id: 1,
-      date: '36.09.1999',
-      tasks: [{id: 0, description: 'wegewg'}, {id: 1, description: 'rrr'}, {id: 2, description: '6rgs'}],
+      date: '15.02.2024',
+      tasks: [
+        {id: 0, description: 'Complete React official tutorial'},
+        {id: 1, description: 'Build a simple to-do app with React'},
+        {id: 2, description: 'Learn about React hooks and state management'},
+      ],
     },
     {
-      title: 'Gagarin Yurka',
-      description: 'SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X SPACE_X',
+      title: 'Plan a Vacation',
+      description: 'Dreaming of a getaway? This project helps you organize every detail of your next vacation, from booking flights to planning activities.',
       id: 2,
-      date: '11.11.2001',
-      tasks: [{id: 0, description: '1234'}, {id: 1, description: '1235534'}, {id: 2, description: '905231234'}],
+      date: '10.03.2024',
+      tasks: [
+        {id: 0, description: 'Research and book flights'},
+        {id: 1, description: 'Find and reserve accommodation'},
+        {id: 2, description: 'Create an itinerary of activities'},
+      ],
     },
   ]);
 

@@ -8,9 +8,9 @@ function Project({projectsArr, activeProjectId, addTask}) {
   return (
       <div className='flex flex-col border-stone-800 border-4 w-full px-4 py-12 gap-5 rounded-xl lg:rounded-l-none'>
 
-        <div className='flex justify-between'>
-          <h1 className='font-bold text-3xl'>{projectsArr[activeProjectId].title}</h1>
-          <button className='text-white bg-stone-800 px-4 py-2 lg:px-10 rounded-xl transition-all duration-300 hover:bg-stone-600 '>Delete</button>
+        <div className='flex flex-col gap-5 lg:gap-0 lg:flex-row justify-between'>
+          <h1 className='font-bold text-3xl text-center lg:text-start'>{projectsArr[activeProjectId].title}</h1>
+          <button className='text-white bg-stone-800 px-4 py-3 lg:py-2 lg:px-10 rounded-xl transition-all duration-300 hover:bg-stone-600 '>Delete</button>
         </div>
 
         <time dateTime={projectsArr[activeProjectId].date} className='text-stone-500'>{projectsArr[activeProjectId].date}</time>
