@@ -43,7 +43,7 @@ function App() {
     setProjects(prevProjects => {
       return prevProjects.map(project =>
           project.id === activeProject
-              ? {...project, tasks: [...project.tasks, {id: Math.random(), description: desc.trim()}]}
+              ? {...project, tasks: [...project.tasks, {id: project.tasks[project.tasks.length - 1].id + 1, description: desc.trim()}]}
               : project
       );
     });
