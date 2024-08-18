@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
 
-function Project({projectsArr, activeProjectId, addTask}) {
+function Project({projectsArr, activeProjectId, addTask, deleteTask}) {
 
   const [taskInputValue, setTaskInputValue] = useState(null);
   const taskInputData = useRef();
@@ -29,7 +29,11 @@ function Project({projectsArr, activeProjectId, addTask}) {
 
           <button
               className='text-white bg-stone-800 px-4 lg:px-10 transition-all duration-300-2 rounded-xl hover:bg-stone-600 py-3 lg:py-0'
-              onClick={()=>addTask(taskInputValue)}
+              onClick={()=>{
+                addTask(taskInputValue);
+                setTaskInputValue('');
+                taskInputData.current.value = '';
+              }}
           >
             Add Task
           </button>
@@ -41,7 +45,9 @@ function Project({projectsArr, activeProjectId, addTask}) {
               <article key={task.id} className='flex items-center justify-between'>
                 <p>{task.description}</p>
                 <button
-                    className='text-white bg-stone-800 px-4 py-2 lg:px-10 rounded-xl transition-all duration-300 hover:bg-stone-600'>Clear
+                    className='text-white bg-stone-800 px-4 py-2 lg:px-10 rounded-xl transition-all duration-300 hover:bg-stone-600'
+                    onClick={()=>deleteTask(task.id)}
+                >Clear
                 </button>
               </article>
           ))}
