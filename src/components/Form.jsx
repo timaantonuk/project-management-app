@@ -26,7 +26,7 @@ function Form({onAddProjectClick}) {
   );
 
   return (
-      <form className='flex flex-col border-stone-800 border-4 w-full px-4 py-12 gap-5 rounded-xl lg:rounded-l-none'>
+      <form className='bg-white opacity-[92%] flex flex-col border-stone-800 border-4 w-full px-4 py-12 gap-5 rounded-xl lg:rounded-l-none'>
 
 
 

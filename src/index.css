@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130%;
+    height: 130%;
+    background-image: url("https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147509972/images/2cbcd45-c05e-77bb-567-1ae66d3e24b6_Polka-Dot.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    scale: 1.3;
+    filter: blur(4px);
+    z-index: -1;
+    animation: 15s infinite bg-move;
+}
+
+@keyframes bg-move {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
