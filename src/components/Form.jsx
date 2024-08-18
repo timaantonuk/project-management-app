@@ -1,8 +1,7 @@
 import React, {useRef, useState} from 'react';
 import {generateRandomNumericID} from "../utils.js";
-import project from "./Project.jsx";
 
-function Form({onAddProjectClick}) {
+function Form({onAddProjectClick, onDismiss}) {
 
   const titleInputData = useRef();
   const descriptionInputData = useRef();
@@ -34,6 +33,8 @@ function Form({onAddProjectClick}) {
             <h1 className='font-bold text-3xl'>Add New Project</h1>
             <div className='flex gap-4 w-full lg:w-auto'>
               <button
+                  type='button'
+                  onClick={onDismiss}
                   className='text-stone-800 bg-white border-2 border-stone-800 px-4 lg:px-10 transition-all duration-300-2 rounded-xl hover:bg-stone-200 py-3 lg:py-2 w-1/2 lg:w-auto'>Cancel
               </button>
               <button
@@ -80,13 +81,13 @@ function Form({onAddProjectClick}) {
           </div>
 
           <div className='flex flex-col gap-3'>
-            <label ref={dateInputData} htmlFor="title" className='text-xl font-bold'>Due Date</label>
+            <label ref={dateInputData} htmlFor="date" className='text-xl font-bold'>Due Date</label>
             <input
                 onChange={(e) => setNewProject(prevState => {
                   return {...prevState, date: e.target.value}
                 })}
                 className='py-3 px-4 rounded-xl focus:outline-none bg-stone-200 shadow transition-all duration-300 focus:border-b-4 border-y-stone-800'
-                type="date" id='title' name='title' placeholder='Pick a date...'/>
+                type="date" id='date' name='date' placeholder='Pick a date...'/>
             {wrongInfo.date !== '' ? "" : <p className='font-light text-sm'>Date required!</p>}
           </div>
 
