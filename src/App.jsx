@@ -4,6 +4,7 @@ import Form from "./components/Form.jsx";
 import NoProjects from "./components/NoProjects.jsx";
 import {useEffect, useState} from "react";
 import {generateRandomNumericID} from "./utils.js";
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
@@ -77,12 +78,12 @@ function App() {
 
   function addTask(desc) {
     if (!desc || desc[0] === ' ') {
-      return
+      return;
     }
     setProjects(prevProjects => {
       return prevProjects.map(project =>
           project.id === activeProject
-              ? {...project, tasks: [...project.tasks, {id: generateRandomNumericID(3), description: desc.trim()}]}
+              ? {...project, tasks: [...project.tasks, {id: uuidv4(), description: desc.trim()}]}
               : project
       );
     });

@@ -1,6 +1,5 @@
 import React, {useRef, useState} from 'react';
 import {generateRandomNumericID} from "../utils.js";
-import project from "./Project.jsx";
 
 function Form({onAddProjectClick}) {
 

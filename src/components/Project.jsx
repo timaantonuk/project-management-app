@@ -6,7 +6,6 @@ function Project({projectsArr, activeProjectId, addTask, deleteTask, deleteProje
   const taskInputData = useRef();
 
   const activeProject = projectsArr.find(project => project.id === activeProjectId);
-
   return (
       <div className='bg-white opacity-[92%] flex flex-col border-stone-800 border-4 w-full px-4 py-12 gap-5 rounded-xl lg:rounded-l-none'>
 
@@ -63,6 +62,8 @@ function Project({projectsArr, activeProjectId, addTask, deleteTask, deleteProje
         </div>
       </div>
   );
+
+
 }
 
 export default Project;
