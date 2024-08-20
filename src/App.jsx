@@ -49,7 +49,7 @@ function App() {
       return;
     }
     setProjects(prevProjects => {
-      return prevProjects.map((project, index) =>
+      return prevProjects.map((project) =>
           project.id === activeProject
               ? {...project, tasks: [...project.tasks, {id: uuidv4(), description: desc.trim()}]}
               : project
