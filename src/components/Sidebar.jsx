@@ -18,8 +18,8 @@ function Sidebar({projectsArr, onActiveProjectClick, activeProjectId, onProjectC
         <ul>
 
           {projectsArr.map((project) => (
-              <li onClick={()=>onActiveProjectClick(project.id)} key={project.id} className={`mb-4 py-3 px-3 rounded-xl transition-all duration-300 hover:bg-stone-600 ${project.id === activeProjectId ? 'bg-stone-700' : ''}`}>
-                <button>{project.title}</button>
+              <li key={project.id} >
+                <button className={`mb-4 py-3 px-3 rounded-xl transition-all duration-300 w-full text-left cursor-pointer hover:bg-stone-600 ${project.id === activeProjectId ? 'bg-stone-700' : ''}`} onClick={()=>onActiveProjectClick(project.id)}>{project.title}</button>
               </li>
           ))}
 

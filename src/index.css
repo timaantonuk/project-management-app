@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    overflow-x: hidden;
+}
+
 body {
     position: relative;
     margin: 0;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body::before {
